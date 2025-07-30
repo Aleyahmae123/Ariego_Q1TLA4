@@ -1,0 +1,167 @@
+*{
+padding: 0;
+margin: 0;
+}
+
+body{
+  background-image: url("Space dark.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative; 
+}
+
+.planet1{
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Planet 2 (Earth) */
+
+
+.Earth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px; 
+  height: 500px;
+  transform: translate(-50%, -50%);
+  animation: rotateEarth 10s linear infinite; 
+}
+
+.planet2{
+width: 80px;
+height: 80px;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+position: absolute;
+top: 50%;
+left: 0%;
+transform: translateY(-50%);
+}
+
+@keyframes rotateEarth {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Planet3 (Moon) */
+
+
+.Moon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+  animation: rotateMoon 4s linear infinite; 
+}
+
+
+.planet3 {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 90%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+
+@keyframes rotateMoon {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Mars (Plannet4) */
+
+
+.Mars{
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  width: 150px; 
+  height: 150px;
+  transform: translateY(-50%);
+  animation: rotatePlanet4 6s linear infinite;
+}
+
+
+.planet4 {
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 70%;
+  left: 100%; 
+  transform: translateY(-50%);
+}
+
+
+@keyframes rotatePlanet4 {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* Bato (planet5) */
+
+
+.planet5 {
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%; 
+  animation: swingAsteroid 10s cubic-bezier(0.3, 0.5, 0.5, 1) infinite; /* Swinging motion */
+}
+
+
+@keyframes swingAsteroid {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(300px) translateY(0);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(90deg) translateX(200px) translateY(150px);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) translateX(100px) translateY(200px);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(270deg) translateX(200px) translateY(100px);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(300px) translateY(0);
+  }
+}
